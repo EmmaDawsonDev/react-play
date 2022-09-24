@@ -16,18 +16,19 @@ const ExtendedFooter = () => {
         <div className="body-primary">
           <h3>
             <span className="sr-only">ReactPlay</span>
-            <img src={LogoLight} alt="Logo of ReactPlay" />
+            <img src={LogoLight} alt="ReactPlay Logo" />
           </h3>
           <p className="p-lg">
-            An open-source project made with ❤️ by{" "}
+            An open-source project made with ❤️ by{' '}
             <a
               href="https://tapasadhikary.com"
               className="text-link-default"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Tapas Adhikary website (opens in new tab)"
             >
               Tapas Adhikary
-            </a>{" "}
+            </a>{' '}
             and friends.
           </p>
           <p>
@@ -39,9 +40,9 @@ const ExtendedFooter = () => {
                   className="social-link"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Twitter (opens in new tab)"
                 >
                   <BsTwitter className="icon" />
-                  <span className="sr-only">Twitter</span>
                 </a>
               </li>
               <li>
@@ -50,9 +51,9 @@ const ExtendedFooter = () => {
                   className="social-link"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Github (opens in new tab)"
                 >
                   <BsGithub className="icon" />
-                  <span className="sr-only">Github</span>
                 </a>
               </li>
               <li>
@@ -61,9 +62,9 @@ const ExtendedFooter = () => {
                   className="social-link"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Discord (opens in new tab)"
                 >
                   <FaDiscord className="icon" />
-                  <span className="sr-only">Discord</span>
                 </a>
               </li>
               <li>
@@ -72,35 +73,32 @@ const ExtendedFooter = () => {
                   className="social-link"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="React Play blog (opens in new tab)"
                 >
                   <IoLogoRss className="icon" />
-                  <span className="sr-only">BlogPost</span>
                 </a>
               </li>
             </ul>
           </p>
           <p>
-            <small>Email us</small>{" "}
+            <small>Email us</small>{' '}
             <div>
-              <a
-                href="mailto:contact@reactplay.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-link-default"
-              >
+              <a href="mailto:contact@reactplay.io" target="_blank" rel="noopener noreferrer" className="text-link-default">
                 contact@reactplay.io
               </a>
             </div>
           </p>
           <p className="mt-8 mb-4">
-            <a href="https://www.netlify.com" className="inline-block"> <img src="https://www.netlify.com/v3/img/components/netlify-light.svg" alt="Deploys by Netlify" /> </a>
+            <a href="https://www.netlify.com" className="inline-block">
+              {' '}
+              <img src="https://www.netlify.com/v3/img/components/netlify-light.svg" alt="Deploys by Netlify" />{' '}
+            </a>
           </p>
         </div>
         <div className="body-secondary">
           <h3 className="section-title mt-3">About</h3>
           <p className="mb-4">
-            ReactPlay is an opensource platform that helps you learn, create and
-            share ReactJS projects with the developer community.
+            ReactPlay is an opensource platform that helps you learn, create and share ReactJS projects with the developer community.
           </p>
           <div className="flex flex-wrap gap-1">
             <a
@@ -108,11 +106,12 @@ const ExtendedFooter = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary mr-2"
+              aria-label="Create new play (opens in new window)"
             >
               <IoAddSharp className="icon" />
               <span className="btn-label">Create</span>
             </a>
-            <Link to="/plays" className="btn-default-light">
+            <Link to="/plays" className="btn-default-light" aria-label="Browse React Play">
               <MdManageSearch className="icon" />
               <span className="btn-label">Browse</span>
             </Link>
@@ -131,6 +130,7 @@ const ExtendedFooter = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="home-anchor home-anchor-sm"
+                aria-label="Read our blog posts (opens in new tab)"
               >
                 <span className="text">Read our blog posts</span>
               </a>
@@ -140,32 +140,26 @@ const ExtendedFooter = () => {
         <div className="body-tertiary">
           <h3 className="section-title">Show love</h3>
           <p className="mb-2">
-            Enjoying ReactPlay? Please help us spreading the word You can share
-            about ReactPlay on any of your favorite social media platforms.
+            Enjoying ReactPlay? Please help us spreading the word You can share about ReactPlay on any of your favorite social media
+            platforms.
           </p>
-          <button
-            onClick={() => setShowShareModal(!showShareModal)}
-            className="home-anchor home-anchor-sm"
-            href="#"
-          >
+          <button onClick={() => setShowShareModal(!showShareModal)} className="home-anchor home-anchor-sm" href="#">
             <span className="text">Share about ReactPlay</span>
           </button>
-          <p className="mt-10 mb-2">
-            Your support means a lot to us. Want to be our Sponsor and support
-            us?
-          </p>
+          <p className="mt-10 mb-2">Your support means a lot to us. Want to be our Sponsor and support us?</p>
           <a
             target="_blank"
             rel="noopener noreferrer"
             className="home-anchor home-anchor-sm"
             href="https://github.com/sponsors/reactplay"
+            aria-label="Sponsor React Play on Github (opens in new tab) "
           >
             <span className="text">Sponsor ReactPlay</span>
           </a>
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default ExtendedFooter;

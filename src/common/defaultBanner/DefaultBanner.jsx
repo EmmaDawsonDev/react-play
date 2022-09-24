@@ -16,12 +16,11 @@ const DefaultBanner = () => {
         with ReactPlay
       </h2>
       <p className="body-desc">
-        ReactPlay is an open-source platform to learn, create and share ReactJS
-        projects with the developer community. Start by browsing the plays or
-        exploring the source code.
+        ReactPlay is an open-source platform to learn, create and share ReactJS projects with the developer community. Start by browsing the
+        plays or exploring the source code.
       </p>
       <div className="body-c2a">
-        <Link to="/plays" className="body-c2a-btn body-c2a-btn--primary">
+        <Link to="/plays" className="body-c2a-btn body-c2a-btn--primary" aria-label="Browse React Play">
           <MdManageSearch className="icon" />
           <span className="btn-label">Browse</span>
         </Link>
@@ -30,19 +29,19 @@ const DefaultBanner = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="body-c2a-btn umami--click--github"
+          aria-label="Github repository (opens in new tab)"
         >
           <BsGithub className="icon" />
           <span className="btn-label">
-            GitHub{" "}
+            GitHub{' '}
             <div className="label-info-more">
-              <FiStar />{" "}
-              <div className="more-label">{data.stargazers_count}</div>
-            </div>{" "}
+              <FiStar /> <div className="more-label">{data.stargazers_count}</div>
+            </div>{' '}
           </span>
         </a>
       </div>
     </div>
-  );
+  )
 };
 
 export default DefaultBanner;

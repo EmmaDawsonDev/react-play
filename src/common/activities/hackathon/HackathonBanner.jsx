@@ -23,9 +23,8 @@ function HackathonBanner() {
         <div className="my-2 md:my-4 md:text-xl">
           <p className="text-2xl font-bold mt-8 mb-4 text-center lg:text-left">Developers and Hacking are inseparable!</p>
           <p className="text-base opacity-50 mt-4 mb-8 text-center lg:text-left">
-            ReactPlay brings you the opportunity to take part in the Hackathon
-            and learn from it. Showcase your mindblowing ideas, build projects,
-            and create content - there are also chances to win exciting prizes.
+            ReactPlay brings you the opportunity to take part in the Hackathon and learn from it. Showcase your mindblowing ideas, build
+            projects, and create content - there are also chances to win exciting prizes.
           </p>
         </div>
         <div className="">
@@ -35,34 +34,34 @@ function HackathonBanner() {
               target="_blank"
               rel="noopener noreferrer"
               className="body-c2a-btn  body-c2a-btn--primary"
+              aria-label="Get started (opens in new tab)"
             >
-              <IoIosRocket className="icon"/>
+              <IoIosRocket className="icon" />
               <span className="btn-label">Get started</span>
             </a>
             <a
-            href="https://github.com/reactplay/activities"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="body-c2a-btn umami--click--github"
-          >
-            <BsGithub className="icon" />
-            <span className="btn-label">
-              GitHub{" "}
-              <div className="label-info-more">
-                <FiStar />{" "}
-                <div className="more-label">{data.stargazers_count}</div>
-              </div>{" "}
-            </span>
-          </a>
+              href="https://github.com/reactplay/activities"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="body-c2a-btn umami--click--github"
+              aria-label="Github (opens in new tab)"
+            >
+              <BsGithub className="icon" />
+              <span className="btn-label">
+                GitHub{' '}
+                <div className="label-info-more">
+                  <FiStar /> <div className="more-label">{data.stargazers_count}</div>
+                </div>{' '}
+              </span>
+            </a>
           </div>
-          
         </div>
       </div>
       <div>
         <img src={HackerBannerImage} className="hackathon-banner-image" />
       </div>
     </div>
-  );
+  )
 }
 
 export default HackathonBanner;

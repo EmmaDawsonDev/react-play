@@ -35,10 +35,10 @@ const HeaderNav = ({ showBrowse }) => {
         <Box className="modal-share">
           <Typography
             sx={{
-              display: "block",
-              textAlign: "center",
+              display: 'block',
+              textAlign: 'center',
               py: 2,
-              fontFamily: "var(--ff-default)",
+              fontFamily: 'var(--ff-default)',
             }}
             component="div"
             variant="subtitle1"
@@ -46,34 +46,20 @@ const HeaderNav = ({ showBrowse }) => {
             Share about ReactPlay
           </Typography>
           <SocialShare />
-          <Box
-            component="div"
-            sx={{ mt: 4, display: "flex", justifyContent: "flex-end" }}
-          >
+          <Box component="div" sx={{ mt: 4, display: 'flex', justifyContent: 'flex-end' }}>
             <button className="modal-share-close" onClick={modalClose}>
-              <GoX size="16px" className="icon" />{" "}
-              <span className="sr-only">Cancel</span>
+              <GoX size="16px" className="icon" /> <span className="sr-only">Cancel</span>
             </button>
           </Box>
         </Box>
       </Modal>
-      <button
-        className="navbar-toggler"
-        type="button"
-        onClick={() => setShowToggleMenu(true)}
-      >
+      <button className="navbar-toggler" type="button" onClick={() => setShowToggleMenu(true)}>
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div
-        className={showToggleMenu ? "navbar-collapse show" : "navbar-collapse"}
-      >
+      <div className={showToggleMenu ? 'navbar-collapse show' : 'navbar-collapse'}>
         <ul className="header-links" data-testid="header-links-container">
           <li className="menu-closer">
-            <button
-              className="navbar-closer"
-              type="button"
-              onClick={() => setShowToggleMenu(false)}
-            >
+            <button className="navbar-closer" type="button" onClick={() => setShowToggleMenu(false)}>
               <MdClose className="navbar-closer-icon" />
               <span className="sr-only">Close</span>
             </button>
@@ -84,6 +70,7 @@ const HeaderNav = ({ showBrowse }) => {
                 to="/plays"
                 className="app-header-btn app-header-btn--secondary"
                 data-testid="browse-btn"
+                aria-label="Browse React Play"
               >
                 <MdManageSearch className="icon" />
                 <span className="btn-label">Browse</span>
@@ -91,12 +78,13 @@ const HeaderNav = ({ showBrowse }) => {
             </li>
           )}
           <li className="menu-spacer">
-            {process.env.NODE_ENV === "development" ? (
+            {process.env.NODE_ENV === 'development' ? (
               <a
                 href="/plays/create"
                 rel="noopener noreferrer"
                 className="app-header-btn app-header-btn--primary"
                 data-testid="create-btn"
+                aria-label="Create new play (beta)"
               >
                 <IoAddSharp className="icon" />
                 <span className="btn-label">Create</span>
@@ -109,6 +97,7 @@ const HeaderNav = ({ showBrowse }) => {
                 rel="noopener noreferrer"
                 className="app-header-btn app-header-btn--primary umami--click--create-play"
                 data-testid="create-btn"
+                aria-label="Create new play (opens in new tab)"
               >
                 <IoAddSharp className="icon" />
                 <span className="btn-label">Create</span>
@@ -116,11 +105,7 @@ const HeaderNav = ({ showBrowse }) => {
             )}
           </li>
           <li>
-            <Link
-              to="/ideas"
-              className="app-header-btn app-header-btn--default"
-              data-testid="ideas-btn"
-            >
+            <Link to="/ideas" className="app-header-btn app-header-btn--default" data-testid="ideas-btn">
               <FaLightbulb className="icon" />
               <span className="btn-label">Idea</span>
             </Link>
@@ -132,6 +117,7 @@ const HeaderNav = ({ showBrowse }) => {
               rel="noopener noreferrer"
               className="app-header-btn app-header-btn--default umami--click--github"
               data-testid="github-btn"
+              aria-label="Github (opens in new tab)"
             >
               <BsGithub className="icon" />
               <span className="btn-label">GitHub</span>
@@ -144,6 +130,7 @@ const HeaderNav = ({ showBrowse }) => {
               rel="noopener noreferrer"
               className="app-header-btn app-header-btn--default"
               data-testid="twitter-btn"
+              aria-label="Twitter (opens in new tab)"
             >
               <BsTwitter className="icon" />
               <span className="btn-label">Twitter</span>
@@ -154,18 +141,20 @@ const HeaderNav = ({ showBrowse }) => {
               className="app-header-btn app-header-btn--default"
               onClick={handleClick}
               data-testid="share-btn"
+              aria-label="Share"
+              aria-expanded={open}
             >
               <IoHeartSharp className="icon" />
               <span className="btn-label">Share</span>
             </button>
           </li>
           <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-            <Box sx={{ p: 4, pt: 2, borderRadius: 2, width: "360px" }}>
+            <Box sx={{ p: 4, pt: 2, borderRadius: 2, width: '360px' }}>
               <h3 className="section-title">Show Love</h3>
               <button
                 onClick={() => {
-                  modalClose();
-                  handleClose();
+                  modalClose()
+                  handleClose()
                 }}
                 className="my-2 btn-default-light"
                 href="#"
@@ -175,8 +164,7 @@ const HeaderNav = ({ showBrowse }) => {
               </button>
               <p className="mt-2 mb-8 leading-tight">
                 <small>
-                  Enjoying ReactPlay? Please help us spreading the word. You can
-                  share about ReactPlay on any of your favorite social media
+                  Enjoying ReactPlay? Please help us spreading the word. You can share about ReactPlay on any of your favorite social media
                   platforms.
                 </small>
               </p>
@@ -191,17 +179,14 @@ const HeaderNav = ({ showBrowse }) => {
                 <span className="btn-label">Sponsor ReactPlay</span>
               </a>
               <p className="mt-2 mb-4 leading-tight">
-                <small>
-                  Your support means a lot to us. Want to be our Sponsor and
-                  support us?
-                </small>
+                <small>Your support means a lot to us. Want to be our Sponsor and support us?</small>
               </p>
             </Box>
           </Menu>
         </ul>
       </div>
     </nav>
-  );
+  )
 };
 
 export default HeaderNav;

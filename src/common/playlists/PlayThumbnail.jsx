@@ -10,23 +10,18 @@ import countByProp from "common/utils/countByProp";
 
 const Author = ({ user }) => {
   return (
-    <div className='play-author flex items-center gap-2'>
+    <div className="play-author flex items-center gap-2">
       <img
-        className='rounded-full border border-zink-400'
-        src={
-          user?.avatarUrl
-            ? !!user?.avatarUrl.length
-              ? user?.avatarUrl
-              : userImage
-            : userImage
-        }
-        width='25px'
-        height='25px'
-        alt='avatar'
+        className="rounded-full border border-zink-400"
+        src={user?.avatarUrl ? (!!user?.avatarUrl.length ? user?.avatarUrl : userImage) : userImage}
+        width="25px"
+        height="25px"
+        alt=""
       />
-      <div className='author-anchor'>{user?.displayName}</div>
+      <span class="sr-only">by</span>
+      <div className="author-anchor">{user?.displayName}</div>
     </div>
-  );
+  )
 };
 
 const PlayThumbnail = ({ play }) => {
